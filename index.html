@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas Countdown</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="winter-theme">
+        <h1 id="title">Countdown to Christmas</h1> <!-- Add heading -->
+        <div id="countdown"></div>
+    </div>
+    <script>
+        function updateCountdown() {
+            const christmas = new Date('December 25, 2024 00:00:00').getTime();
+            const now = new Date().getTime();
+            const distance = christmas - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('countdown').innerHTML = 
+                days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById('title').remove();
+                document.getElementById('countdown').innerHTML = "Merry Christmas!";
+            }
+        }
+
+        const x = setInterval(updateCountdown, 1000);
+    </script>
+</body>
+</html>

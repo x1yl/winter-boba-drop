@@ -1,0 +1,46 @@
+body {
+    background: url('snow-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Mountains of Christmas', cursive; /* Update font family */
+    color: #5be02a;
+    text-align: center;
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; /* Adjust height to 100vh */
+    margin: 0;
+}
+
+#countdown {
+    font-size: 4em; /* Increase font size */
+    font-weight: bold; /* Make text bold */
+    text-shadow: 2px 2px 4px #000; /* Add text shadow */
+    color: #e63434; /* Change text color */
+}
+
+#winter-theme {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Add box shadow */
+}
+
+.snowflake {
+    color: #fff;
+    font-size: 2em;
+    animation: snow 10s linear infinite;
+    opacity: 0.8; /* Add opacity */
+}
+
+@keyframes snow {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(100vh); }
+}
+
+h1 {
+    font-size: 3em; /* Set font size for h1 */
+    margin-bottom: 20px; /* Add some margin below the heading */
+}
